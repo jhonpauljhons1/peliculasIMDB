@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Playlist({ playlist }) {
   if (playlist.length === 0) {
     return <p>No has agregado películas a tu lista de reproducción.</p>;

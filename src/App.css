@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css - Estilos para App.jsx */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos del Header */
+.header {
+  background-color: #fffb00;
+  color: white;
+  padding: 20px 10px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header nav ul {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header nav a:hover {
+  color: #c7b9b9;
 }
 
-.card {
-  padding: 2em;
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
-.read-the-docs {
-  color: #888;
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  color: #555;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
 }
