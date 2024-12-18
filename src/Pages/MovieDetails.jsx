@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 import axios from 'axios';
 
 const API_KEY = 'c7b8bdd78d9151aa976c660c5e9070a5';
@@ -14,7 +13,12 @@ function MovieDetails({ addToPlaylist }) {
   useEffect(() => {
     async function fetchMovieDetails() {
       try {
-        const response = await axios.get(`${API_URL}/${id}?api_key=${API_KEY}`);
+        const response = await axios.get(`${API_URL}/${id}`,{
+          params:{
+            api_key: API_KEY,
+            language: 'es-ES',
+          },
+        });
         setMovie(response.data);
       } catch (err) {
         setError('Error al cargar los detalles de la película.');
